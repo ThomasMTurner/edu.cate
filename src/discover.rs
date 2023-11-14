@@ -24,10 +24,10 @@ pub mod discoverer {
         Ok(contents)
     }
 
-    pub fn get_domains_and_webpages() -> (Vec<Vec<String>> , Vec<Vec<String>>) {
+    pub fn get_domains_and_webpages() -> (Vec<String> , Vec<String>) {
         let mut edu_domains: Vec<EduDomain> = Vec::new();
-        let mut domains: Vec<Vec<String>> = Vec::new();
-        let mut seed_urls: Vec<Vec<String>> = Vec::new();
+        let mut domains: Vec<String> = Vec::new();
+        let mut seed_urls: Vec<String> = Vec::new();
 
         match read_domains_json() {
             Ok(contents) => {
@@ -41,11 +41,11 @@ pub mod discoverer {
         }
 
         for edu_domain in edu_domains {
-            let domains_vec = edu_domain.domains.clone();
-            let web_pages_vec = edu_domain.web_pages.clone();
+            let mut domains_vec = edu_domain.domains.clone();
+            let mut web_pages_vec = edu_domain.web_pages.clone();
 
-            domains.extend(vec![domains_vec]);
-            seed_urls.extend(vec![web_pages_vec]);
+            domains.append(&mut domains_vec);
+            seed_urls.append(&mut web_pages_vec);
         }
         
         (seed_urls, domains)
