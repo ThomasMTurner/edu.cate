@@ -4,6 +4,8 @@ pub mod crawler {
     use reqwest::get;
     use scraper::{Html, Selector};
     #[derive(Debug, Eq, PartialEq, Clone)]
+
+    //simple representation of each document using the unique URL and how far we have travelled from seed URL's
     struct UrlToVisit {
         url: String,
         crawl_depth: u32,
@@ -139,6 +141,5 @@ This is the iterative (non-recursive) version of the crawling algorithm
     (3) Check if URL has already been visited, if so, remove from queue 
     (4) If not, get the URL, add to visited, parse URL for different content (can leave step omitted)
     (5) Get the URL's from within the parsed HTML, and enqueue these.
-
 
 */

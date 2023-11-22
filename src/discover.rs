@@ -31,6 +31,7 @@ pub mod discoverer {
 
         match read_domains_json() {
             Ok(contents) => {
+                //here we use Serde's deserialiser to convert JSON to string, and return the result of this conversion (admittedly unsafely)
                 edu_domains = from_str(&contents).unwrap();
                 domains = Vec::new();
                 seed_urls = Vec::new();
