@@ -1,0 +1,1 @@
+/Users/Mycer/Desktop/Personal\ Projects/educate-search/target/debug/educate-search: /Users/Mycer/Desktop/Personal\ Projects/educate-search/src/crawl.rs /Users/Mycer/Desktop/Personal\ Projects/educate-search/src/discover.rs /Users/Mycer/Desktop/Personal\ Projects/educate-search/src/index.rs /Users/Mycer/Desktop/Personal\ Projects/educate-search/src/main.rs
