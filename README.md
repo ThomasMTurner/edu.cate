@@ -1,2 +1,2 @@
 # edu.cate
-An independent search engine and browser built solely for research purposes, with Rust and JS.
+A search engine interface built for independent academic research, with Rust and Next.js.
